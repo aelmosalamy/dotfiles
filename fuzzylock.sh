@@ -5,7 +5,7 @@ scrot --overwrite /tmp/locker.png
 # Use ImageMagick module to blur the screenshot, uncomment your preference
 # Warning: The more effects you add the slower it is to apply the lock
 # thus it might feel unresponsive.
-convert /tmp/locker.png -scale 10% -scale 1000% /tmp/locker.png
+convert /tmp/locker.png -scale 10% -fill black -colorize 50% -scale 1000% /tmp/locker.png
 
 # Lock screen using the generated, blurred image
 # Warning: The --nofork option is important since it allows lock to apply

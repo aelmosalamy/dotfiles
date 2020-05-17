@@ -14,6 +14,7 @@ SHELL: zsh
 SHELL_PROMPT_CONFIGURATOR: powerlevel10k
 	conf: gist
 	loc: ~/.p10k.zsh
+NOTIFICATION_DAEMON: notify-osd
 WM: i3-gaps
 	conf: github
 	loc: ~/.config/i3/config

@@ -122,7 +122,7 @@ set $ws4 "4:  "
 set $ws5 "5:  "
 set $ws6 "6:  "
 set $ws7 "7:  "
-set $ws8 "8: "
+set $ws8 "8:  "
 set $ws9 "9:  "
 set $ws10 "10:  "
 
@@ -199,8 +199,8 @@ bar {
 
 for_window[class="^.*"] border pixel 2
 
-gaps inner 20
-gaps outer 10
+gaps inner 0
+gaps outer 0
 
 # COLOR CUSTOMIZATIONS
 # class                 border  bground text    indicator child_border

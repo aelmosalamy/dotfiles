@@ -48,7 +48,7 @@ EVENT_LISTENER: xev
 
 --- GUI ESSENTIALS ---
 BROWSER: *Firefox Chrome
-FILE_MANAGER: Thunar
+FILE_MANAGER: ?nautilus ?Thunar
 IMAGE_VIEWER: feh
 DOCUMENT_VIEWER: Atril
 MEDIA_PLAYER: vlc

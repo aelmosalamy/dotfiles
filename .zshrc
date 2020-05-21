@@ -115,5 +115,6 @@ export main="/media/adham/LENOVO/adham"
 # an alias to open any file in your preferred application
 # from terminal.
 alias open=xdg-open
-
 alias feh="feh -.dZ"
+
+export PATH=$PATH:/usr/local/nodejs/bin

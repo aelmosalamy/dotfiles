@@ -10,6 +10,8 @@ end_step() {
   unset step_name
 }
 
+old_directory=$PWD
+
 start_step "updating system"
 apt-get update
 end_step

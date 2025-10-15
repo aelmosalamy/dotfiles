@@ -1,4 +1,5 @@
 #!/bin/bash
+set -xeuo pipefail
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -24,7 +25,6 @@ print_error() {
 print_warning() {
     echo -e "${YELLOW}[!]${RST} $1"
 }
-
 
 start_step() {
   export step_name="$1"

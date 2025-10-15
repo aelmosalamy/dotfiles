@@ -1,16 +1,42 @@
 #!/bin/bash
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+RST='\033[0m'
+
+# LOG_FILE="$HOME/ad_install.log"
+# exec > >(tee -a "$LOG_FILE") 2>&1
+
+print_status() {
+    echo -e "${BLUE}[*]${RST} $1"
+}
+
+print_success() {
+    echo -e "${GREEN}[+]${RST} $1"
+}
+
+print_error() {
+    echo -e "${RED}[-]${RST} $1"
+}
+
+print_warning() {
+    echo -e "${YELLOW}[!]${RST} $1"
+}
+
+
 start_step() {
   export step_name="$1"
-  echo "[*] ----- $step_name -----"
+  print_status "----- $step_name -----"
 }
 
 end_step() {
-  echo "[+] ----- completed $step_name -----"
+  print_success "----- completed $step_name -----"
   unset step_name
 }
 
-old_directory=$PWD
+original_directory=$PWD
 
 start_step "updating system"
 apt-get update
@@ -45,4 +71,6 @@ tar -xvzf bloodhound-cli-linux-amd64.tar.gz
 ./bloodhound-cli install
 end_step
 
-echo "\n------------------------\ndone, enjoy your kali!"
+cd $original_directory
+
+print_success "\n------------------------\nsetup complete!"

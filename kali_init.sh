@@ -65,6 +65,14 @@ systemctl enable docker --now
 usermod -aG docker $USER
 end_step
 
+start_step "installing ligolo-ng"
+apt install -y ligolo-ng
+end_step
+
+start_step "installing peass"
+apt install -y peass
+end_step
+
 start_step "installing bloodhound-cli"
 wget https://github.com/SpecterOps/bloodhound-cli/releases/latest/download/bloodhound-cli-linux-amd64.tar.gz
 tar -xvzf bloodhound-cli-linux-amd64.tar.gz

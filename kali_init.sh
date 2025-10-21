@@ -1,5 +1,5 @@
 #!/bin/bash
-set -xeuo pipefail
+set -euo pipefail
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -11,19 +11,19 @@ RST='\033[0m'
 # exec > >(tee -a "$LOG_FILE") 2>&1
 
 print_status() {
-    echo -e "${BLUE}[*]${RST} $1"
+    echo -e "${BLUE}[*]$1${RST}"
 }
 
 print_success() {
-    echo -e "${GREEN}[+]${RST} $1"
+    echo -e "${GREEN}[+]$1${RST}"
 }
 
 print_error() {
-    echo -e "${RED}[-]${RST} $1"
+    echo -e "${RED}[-]$1${RST}"
 }
 
 print_warning() {
-    echo -e "${YELLOW}[!]${RST} $1"
+    echo -e "${YELLOW}[!]$1${RST}"
 }
 
 start_step() {

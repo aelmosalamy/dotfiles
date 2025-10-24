@@ -46,9 +46,22 @@ start_step "getting pentester-worthy .zsh_history"
 curl -s https://raw.githubusercontent.com/Jeremiznoo/Updated_Exegol_Zsh_History/refs/heads/main/.zsh_history_for_kali >> ~/.zsh_history
 end_step
 
+start_step "installing flameshot"
+apt install -y flameshot
+end_step
+
 start_step "installing pipx"
 apt install -y pipx
 pipx ensurepath
+end_step
+
+start_step "installing dirsearch"
+apt install -y dirsearch
+pipx ensurepath
+end_step
+
+start_step "installing arjun"
+pipx install arjun
 end_step
 
 start_step "installing certipy-ad"
@@ -71,6 +84,10 @@ end_step
 
 start_step "installing peass"
 apt install -y peass
+end_step
+
+start_step "installing ffuf"
+apt install -y ffuf
 end_step
 
 start_step "installing bloodhound-cli"

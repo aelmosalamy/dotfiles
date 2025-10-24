@@ -80,7 +80,7 @@ end_step
 
 start_step "setting up tinyfilemanager"
 mkdir /home/kali/tinyfilemanager_data
-docker run -d -v /home/kali/tinyfilemanager_data:/var/www/html/data -p 80:80 --restart=always --name tinyfilemanager tinyfilemanager/tinyfilemanager:master
+docker run -d -v /home/kali/tinyfilemanager_data:/var/www/html/data -p 80:80 --restart=always --name tinyfilemanager prasathmani/tinyfilemanager:master
 end_step
 
 start_step "installing ligolo-ng"

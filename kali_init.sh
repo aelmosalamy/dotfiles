@@ -78,6 +78,11 @@ systemctl enable docker --now
 usermod -aG docker $USER
 end_step
 
+start_step "setting up tinyfilemanager"
+mkdir /home/kali/tinyfilemanager_data
+docker run -d -v /home/kali/tinyfilemanager_data:/var/www/html/data -p 80:80 --restart=always --name tinyfilemanager tinyfilemanager/tinyfilemanager:master
+end_step
+
 start_step "installing ligolo-ng"
 apt install -y ligolo-ng
 end_step
